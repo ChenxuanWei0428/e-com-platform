@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {useState} from "react";
+import Login from './components/Login';
+import Register from './components/Register';
+import Products from './pages/Products';
+import Cart from './pages/Cart';
+import LogoutButton from './components/Logout';
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState("register");
+  
+  function GetPage() {
+    switch (page) {
+      case "login":
+        return <Login/>;
+      case "register":
+        return <Register/>;
+      case "products":
+        return <Products/>;
+      case "cart":
+        return <Cart/>;
+      default:
+        return "This page does not exist"
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "App">
+        {GetPage()}
     </div>
   );
-}
+};
 
 export default App;

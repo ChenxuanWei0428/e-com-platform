@@ -1,0 +1,10 @@
+{
+    "description": "This is a testing data file for products",
+    "items": [
+        {"title": "apple", "price": 10, "description": "This is a apple", "image": ""},
+        {"title": "banana", "price": 20, "description": "This is a banana", "image": ""},
+        {"title": "orange", "price": 30, "description": "This is a orange", "image": ""},
+        {"title": "grape", "price": 40, "description": "This is a grape", "image": ""},
+        {"title": "other", "price": 50, "description": "This is some other stuff", "image": ""}
+    ]
+}
